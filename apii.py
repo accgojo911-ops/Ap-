@@ -91,6 +91,18 @@ def send_single_follow(jwt_token: str, target_id: int, url: str) -> tuple:
         return False, None
 
 
+# -----------------------------------------------------------
+# নতুন যুক্ত করা অংশ: মেইন ইউআরএল এ ভিজিট করলে এই রেসপন্স দেখাবে
+# -----------------------------------------------------------
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({
+        "status": "success",
+        "message": "API is running successfully!",
+        "credit": "@RFG_GAMER"
+    }), 200
+
+
 @app.route('/uid', methods=['GET'])
 def follow_api():
     # 1. API Key Validation
