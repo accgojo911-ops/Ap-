@@ -128,11 +128,11 @@ def follow_api():
     elif region_param in ["BD", "BANGLADESH"]:
         selected_url = "https://clientbp.ggpolarbear.com/Follow"
         region_name = "Bangladesh (BD)"
-        token_file = "Jwt_token.json"
+        token_file = "token_bd.json"
     else:
         selected_url = "https://clientbp.ggpolarbear.com/Follow"
         region_name = f"Others ({region_param})"
-        token_file = "Jwt_token.json"
+        token_file = "token_bd.json"
 
     # 5. Load Tokens based on Region
     all_tokens = load_jwt_tokens(token_file)
